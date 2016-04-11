@@ -1,0 +1,11 @@
+<div class="container-fluid addbook">
+  <h1>Add New Book</h1>
+
+  <%= render 'form' %>
+
+  <p class="pull-left btn btn-default"> <%= link_to 'Back', books_path %></p>
+  <% content_for :login do%>
+      <% render "shared/login"%>
+  <%end%>
+
+</div>

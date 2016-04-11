@@ -1,0 +1,192 @@
+body{
+    background-image: url("http://localhost:3000/assets/bg.jpg");
+    background-size: cover;
+}
+a{
+    text-decoration: none !important;
+}
+
+a:hover{
+    font-weight: bold !important;
+    background-color: transparent !important;
+}
+.navbar ,
+.navbar-inverse {
+
+    background-color: indigo !important;
+    height: 70px;
+    border-radius: 0px;
+    border:none;
+}
+.navbar-nav li a,
+.nav li a {
+    font-size: 17px;
+    font-weight: bold;
+    color: white !important;
+    margin-top: 10px;
+}
+.navbar-collapse.in{
+    background-color:indigo !important;
+    z-index:9999;
+    position:absolute;
+    width:100%;
+}
+.navbar-header a img{
+    margin-top: -5px !important;
+    height: 58px;
+}
+.navbar-form{
+    margin-top: 20px !important; ;
+}
+.dropdown{
+    margin-left: 20px;
+    width: 180px;
+}
+
+.dropdown-menu{
+    width: 180px;
+    height: auto;
+    background-color: indigo  !important;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu> .active > a{
+    background-color: indigo !important;
+    width: 180px !important;
+}
+
+.dropdown-menu li a:hover{
+    background-color: purple !important;
+    font-weight: bold;
+}
+.downnav{
+    margin-top:72px ;
+}
+.panel-default{
+    border-radius:0px !important;
+}
+.panel-heading{
+    background-color:indigo !important;
+    color: #ffffff !important;
+    border-radius:0px !important; ;
+}
+.userinfo{
+    margin-top: 10px;
+    margin-left: 20px;
+    height: 300px;
+}
+.sidebox{
+    height: 300px;
+}
+.sidebox p{
+    padding-left: 10px;
+    margin-top: 10px;
+}
+
+.loginbutton{
+    margin-top: 20px;
+    width: 92%;
+    text-align: center;
+    height: 60px;
+    color: #ffffff !important;
+    font-weight: bold !important;
+}
+
+.loginbutton:hover{
+    background-color: limegreen !important;
+}
+
+.btn-side ,
+.btn-side1{
+    width: 160px !important;
+    height: 40px !important;
+    margin-top: 10px;
+    -moz-border-radius: 0px !important;
+    -webkit-border-radius: 0px !important;
+    border-radius: 0px !important;
+    color: #ffffff !important;
+    font-weight: bold !important;
+}
+.btn-side1{
+    margin-left: 20px !important;
+}
+.btn-side:hover{
+    background-color:green !important;
+}
+.btn-side1:hover{
+    background-color:#B00100 !important;
+}
+
+.book-heading{
+    margin-top: -20px;
+}
+
+.book-heading h3{
+    padding: 7px;
+    background-color:cadetblue !important;
+}
+.book-heading h3 a{
+    color: #ffffff;
+}
+
+.book-desc{
+    margin-left: 10px;
+}
+.downcontents h3{
+    background-color: indigo;
+    padding: 14px;
+    color: #ffffff;
+    text-align: center;
+
+}
+.downcontents{
+    margin-top: -20px;
+
+}
+.downcontents1 h3{
+    background-color: indigo;
+    padding: 14px;
+    color: #ffffff;
+    text-align: center;
+}
+.downcontents1{
+
+    margin-top: -20px;
+}
+.downheading{
+    background: #ffffff;
+    margin-top: -10px;
+}
+.sidebarheading h3{
+    background-color: indigo;
+    color: #ffffff;
+    padding: 14px;
+    margin-top: 19px;
+
+}
+.sidebarcontents{
+    background-color:#ffffff;
+    padding-top: 5px;
+    margin-top: -10px;
+    height: 488px;
+}
+.sidebarcontents li{
+    padding-bottom: 8px;
+}
+.thumbnail{
+    margin-left: 6%;
+    height: 20%;
+    margin-top:10px ;
+}
+
+.footer{
+    background-color: #333333;
+    color: #ffffff;
+}
+
+.footer p{
+    margin-top: 10px;
+}

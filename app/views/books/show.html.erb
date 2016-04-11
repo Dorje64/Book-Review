@@ -1,0 +1,92 @@
+
+<p id="notice"><%= notice %></p>
+<div class="bookshow">
+  <h3>
+    <%= @book.name %>
+  </h3>
+  <div class="otherdetails">
+    <p>
+      <strong>Author:</strong>
+      <%= @book.author %>
+    </p>
+
+    <p>
+      <strong>Description:</strong>
+      <%= @book.description %>
+    </p>
+
+    <p>
+      <strong>Category:</strong>
+      <%= @book.category %>
+    </p>
+
+
+    <p>
+      <strong>Like:</strong>
+      <%= @book.like %>
+    </p>
+
+  </div>
+
+
+  <p class="btn btn-default"> <%= link_to 'Edit', edit_book_path(@book) %> </p>
+  <%= link_to "Speech", {:controller => "books", :action => "show", :text => @book.description }%>
+
+
+  <%= form_for([@book,@like]) do |f1|%>
+      <%if !current_user.likes.find_by_book_id(@book.id) %>
+          <%= f1.hidden_field :@book_id, value:@book.id %>
+          <%= f1.hidden_field :@user_id ,value:current_user.id%>
+          <%=f1.submit value: "like"%>
+      <%end%>
+  <%end%>
+<%#= link_to 'Back', books_path %>
+</div>
+
+<div class="comments">
+  <h3> Comments: </h3>
+  <% @book.comments.each do |comment| %>
+
+      <li class="row">
+        <%= image_tag("user.jpeg",:class =>"img-circle col-sm-1 user-comment-image")%>
+        <div class="commentText col-sm-11">
+          <b><%= comment.username %></b>
+          <p class=""><%= comment.content %>  <span class="date sub-text pull-right"><%= time_ago_in_words(comment.created_at) %> ago</span> </p>
+
+        </div>
+      </li>
+
+  <%end%>
+
+  <!--comments-->
+  <%= form_for([@book,@comment]) do |f| %>
+      <% if @comment.errors.any? %>
+          <div id="error_explanation">
+            <h2><%= pluralize(@comment.errors.count, "error") %> prohibited this comment from being saved:</h2>
+
+            <ul>
+              <% @comment.errors.full_messages.each do |message| %>
+                  <li><%= message %></li>
+              <% end %>
+            </ul>
+          </div>
+      <% end %>
+
+      <div class="form-group field commentfield ">
+        <%= f.text_area :content, :class=>"form-control" , :placeholder=>"Your comments" %>
+        <%= f.hidden_field :book_id ,value: @book.id %>
+      </div>
+
+
+      <p class="addbottom">
+        <%= f.submit  :value=> "Add Comment" , :class=>"btn btn-default "  %>
+      </p>
+  <%end%>
+
+</div>
+
+<!--<div class="col-md-12">-->
+<%content_for :login do%>
+    <% render "shared/login"%>
+<%end%>
+

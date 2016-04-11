@@ -1,0 +1,31 @@
+<!--<%#= text_to_flash_player "Talk me!" %>-->
+<%# @book.each do |book| %>
+<div class="col-md-12 downheading">
+  <h3> Recently Added Books</h3>
+  <% @book.each do |book| %>
+  <div class="col-md-5 thumbnail">
+
+    <div class="book-heading">
+      <h3> <book article-info a> <%= link_to  book.name.titlecase, book %></h3>
+    </div>
+
+    <div class="book-desc">
+    <p> <%=truncate(book.description.html_safe ,:length => 80 )%></p>
+
+
+    <td> Writer: <%= book.author %></td>
+
+    <td> <p class="pull-right">Likes: <%= (Like.where('book_id' =>book.id)).count%> </p></td>
+    </div>
+</div>
+  <%end%>
+  </div>
+
+
+<% content_for :login do%>
+<% render "shared/login"%>
+<%end%>
+
+<% content_for :sidebar do%>
+    <%render "shared/sidebar"%>
+<%end%>

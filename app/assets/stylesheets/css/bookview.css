@@ -1,0 +1,46 @@
+.bookshow{
+  background: #ffffff;
+}
+.bookshow h3{
+  background: transparent !important;
+  text-align: left !important;
+  color: #666666 !important;
+}
+.otherdetails{
+  padding-left: 20px;
+}
+.comments{
+  border-top: 1px #000000 solid;
+  margin-top: 10px;
+  background: #ffffff;
+}
+.comments h3{
+  background: transparent !important;
+  text-align: left !important;
+  color: #666666 !important;
+}
+.comments li{
+  margin-left: 25px;
+  margin-right: 25px;
+  padding: 5px;
+  background-color: #BBBBBB;
+  border-bottom: solid 1px #000000;
+  list-style: none;
+}
+.commentfield{
+  margin-left: 25px;
+  margin-right: 25px;
+  margin-top: 10px;
+}
+.addbottom{
+  text-align: center;
+  padding-bottom: 10px;
+
+}
+.user-comment-image{
+
+  height: 50px;
+}
+.date{
+  font-style: italic;
+}

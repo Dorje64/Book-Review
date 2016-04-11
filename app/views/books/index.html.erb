@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+
+
+<h1>Listing books</h1>
+
+<table>
+
+  <tbody>
+  <% @books.each do |book| %>
+      <tr>
+        <td><h4><%= link_to  book.name.titlecase, book %></h4></td>
+        <td><i style="margin-left: 30px"><%= book.author %></i></td>
+        <td><%#= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Book', new_book_path %>
+<%content_for :login do%>
+    <% render "shared/login"%>
+<%end%>

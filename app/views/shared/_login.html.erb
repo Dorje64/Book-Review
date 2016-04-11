@@ -1,0 +1,25 @@
+<% if user_signed_in? %>
+
+    <div class="userinfo text-center">
+
+      <div class="text-center">
+        <p><%=  image_tag("user.jpeg" ,:style=>" height:180px; width:180px; " ,:class =>"img-circle" )%> </p>
+        </br>
+        Welcome <b><i><%= current_user.name %></i></b>
+
+      </div>
+
+      <div class="userbuttons " >
+        <%= link_to 'Add a Book', new_book_path, type:"button" , class:"btn btn-success btn-side" %>
+        <%= link_to('Logout', destroy_user_session_path, :method => :delete, class:"btn btn-danger btn-side1" ) %>
+
+      </div>
+    </div>
+
+<%else%>
+    <div class="sidebox text-center">
+      <p><i>Login to access more features</i></p>
+      <p><%= link_to('Login', new_user_session_path , :method => :get ,:class=>"btn btn-success loginbutton") %></p>
+      <br><p><i>Not Registered?</i></p><p><%= link_to('Register here',   new_user_registration_path , :method => :get ,:class=>"btn btn-success loginbutton") %></p>
+    </div>
+<%end%>

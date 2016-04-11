@@ -1,0 +1,13 @@
+<div class="col-md-4 downcontents">
+
+  <div class="sidebarheading"> <h3>Trending Books</h3>
+  </div>
+  <div class=" sidebarcontents">
+    <ul>
+      <% @book.each do |book|%>
+          <li><h4><book article-info a> <%= link_to  book.name.titlecase, book %></book></h4></li>
+      <%end%>
+    </ul>
+  </div>
+</div>
+</div>
